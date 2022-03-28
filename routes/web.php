@@ -19,3 +19,4 @@ use Illuminate\Http\Request;
 //     return view('welcome');
 // });
 Route::resource('mahasiswa', MahasiswaController::class);
+Route::get('/search', [MahasiswaController::class, 'search']);
