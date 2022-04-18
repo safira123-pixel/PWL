@@ -31,9 +31,9 @@
                     </div>
                     <div class="form-group">
                         <label for="Kelas">Kelas</label>
-                        <select class="form-control">
+                        <select name= "Kelas" class="form-control" id="Kelas">
                             @foreach($kelas as $kls)
-                                <option value ="{{$kls->id}}">{{$kls->nama_kelas}}</option>
+                                <option value ="{{$kls->id}}"> {{$kls->nama_kelas}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -41,7 +41,7 @@
                         <label for="Jurusan">Jurusan</label>
                         <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan" ariadescribedby="Jurusan" >
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="Email">Email</label>
                         <input type="Email" name="Email" class="form-control" id="Email" ariadescribedby="Email" >
                     </div>
@@ -52,7 +52,7 @@
                     <div class="form-group">
                         <label for="Tanggallahir">Tanggal Lahir</label>
                         <input type="Tanggallahir" name="Tanggallahir" class="form-control" id="Tanggallahir" ariadescribedby="Tanggallahir" >
-                    </div>                    
+                    </div>                     -->
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>

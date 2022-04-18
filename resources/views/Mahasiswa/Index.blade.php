@@ -36,9 +36,6 @@
     <th>Nama</th>
     <th>Kelas</th>
     <th>Jurusan</th>
-    <th>Email</th>
-    <th>Alamat</th>
-    <th>Tanggal Lahir</th>
     <th width="280px">Action</th>
   </tr>
   @if(!empty($paginate) && $paginate->count())
@@ -48,9 +45,6 @@
         <td>{{ $mhs->nama }}</td>
         <td>{{ $mhs->kelas->nama_kelas }}</td>
         <td>{{ $mhs->jurusan }}</td>
-        <td>{{ $mhs->email }}</td>
-        <td>{{ $mhs->alamat }}</td>
-        <td>{{ $mhs->tanggallahir }}</td>
         <td>
           <form action="{{ route('mahasiswa.destroy',['mahasiswa'=>$mhs->nim]) }}" method="POST">
             <a class="btn btn-info" href="{{ route('mahasiswa.show',$mhs->nim) }}">Show</a>
@@ -58,6 +52,7 @@
             @csrf
             @method('DELETE')
             <button type="submit" class="btn btn-danger">Delete</button>
+            <a class="btn btn-warning btn-sm" href="/mahasiswa/nilai/{{ $mhs->nim }}">Nilai</a>
           </form>
         </td>
       </tr>
