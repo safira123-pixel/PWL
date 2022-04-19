@@ -53,7 +53,7 @@
         <td><img style="width: 80px; height: 80px; overflow: hidden" class="rounded-circle" src="{{ 
           asset('./storage/'. $mhs->photo_profile) }}" alt=""></td>
         <td>{{ $mhs->alamat }}</td>
-        <td>{{ $mhs->tanggal_lahir }}</td>
+        <td>{{ $mhs->tanggallahir }}</td>
         <td>
           <form action="{{ route('mahasiswa.destroy',['mahasiswa'=>$mhs->nim]) }}" method="POST">
             <a class="btn btn-info" href="{{ route('mahasiswa.show',$mhs->nim) }}">Show</a>
