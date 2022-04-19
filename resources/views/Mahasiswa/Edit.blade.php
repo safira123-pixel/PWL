@@ -19,7 +19,7 @@
                 </ul>
             </div>
             @endif
-            <form method="post" action="{{ route('mahasiswa.update', $mahasiswa->nim) }}" id="myForm">
+            <form method="post" action="{{ route('mahasiswa.update', $mahasiswa->nim) }}" enctype="multipart/form-data" id="myForm">
                 @csrf
                 @method('PUT')
                 <div class="form-group">
@@ -31,14 +31,18 @@
                     <input type="text" name="Nama" class="form-control" id="Nama" value="{{ $mahasiswa->nama }}" aria-describedby="Nama" >
                 </div>
                 <div class="form-group">
-                    <label for="Kelas">Kelas</label>
-                    <input type="Kelas" name="Kelas" class="form-control" id="Kelas" value="{{ $mahasiswa->kelas }}" aria-describedby="Kelas" >
+                    <label for="kelas">Pilih Kelas</label>
+                    <select name="Kelas" class="form-control" id="kelas">
+                        @foreach ($kelas as $item)
+                        <option value="{{ $item->id }}" {{ ($mahasiswa->kelas_id == $item->id) ? 'selected' : '' }}>{{ $item->nama_kelas }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="Jurusan">Jurusan</label>
                     <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan" value="{{ $mahasiswa->jurusan }}" aria-describedby="Jurusan" >
                 </div>
-                <!-- <div class="form-group">
+                <div class="form-group">
                     <label for="Email">Email</label>
                     <input type="Email" name="Email" class="form-control" id="Email" value="{{ $mahasiswa->email }}" aria-describedby="Email" >
                 </div>
@@ -49,7 +53,12 @@
                 <div class="form-group">
                     <label for="Tanggallahir">Tanggal Lahir</label>
                     <input type="Tanggallahir" name="Tanggallahir" class="form-control" id="Tanggallahir" value="{{ $mahasiswa->tanggallahir }}" aria-describedby="Tanggallahir" >
-                </div> -->
+                </div>
+                <div class="form-group">
+                    <label for="File">File</label>
+                    <input type="file" name="userfile" class="form-control" value="{{ $mahasiswa->photo_profile }}" id="File" ariadescribedby="File" >
+                    <img style="width: 100%" src="{{ asset('./storage/'. $mahasiswa->photo_profile) }}" alt="">
+                </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>

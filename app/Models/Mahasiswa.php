@@ -22,6 +22,7 @@ class Mahasiswa extends Model //Definisi Model
             'nama',
             'kelas_id',
             'jurusan',
+            'userfile',
             'email',
             'alamat',
             'tanggallahir',            
@@ -30,5 +31,8 @@ class Mahasiswa extends Model //Definisi Model
         public function kelas()
         {
             return $this->belongsTo(kelas::class);
+        }
+        public function mahasiswa_matakuliah(){
+            return $this->belongsToMany(Mahasiswa_MataKuliah::class);
         }
 };

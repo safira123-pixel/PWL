@@ -19,7 +19,7 @@
                     </ul>
                 </div>
                 @endif
-                <form method="post" action="{{ route('mahasiswa.store') }}" id="myForm">
+                <form method="post" action="{{ route('mahasiswa.store') }}" enctype="multipart/form-data" id="myForm">
                     @csrf
                     <div class="form-group">
                         <label for="Nim">Nim</label>
@@ -30,7 +30,7 @@
                         <input type="Nama" name="Nama" class="form-control" id="Nama" ariadescribedby="Nama" >
                     </div>
                     <div class="form-group">
-                        <label for="Kelas">Kelas</label>
+                        <label for="Kelas">Pilih Kelas</label>
                         <select name= "Kelas" class="form-control" id="Kelas">
                             @foreach($kelas as $kls)
                                 <option value ="{{$kls->id}}"> {{$kls->nama_kelas}}</option>
@@ -41,7 +41,7 @@
                         <label for="Jurusan">Jurusan</label>
                         <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan" ariadescribedby="Jurusan" >
                     </div>
-                    <!-- <div class="form-group">
+                    <div class="form-group">
                         <label for="Email">Email</label>
                         <input type="Email" name="Email" class="form-control" id="Email" ariadescribedby="Email" >
                     </div>
@@ -52,7 +52,11 @@
                     <div class="form-group">
                         <label for="Tanggallahir">Tanggal Lahir</label>
                         <input type="Tanggallahir" name="Tanggallahir" class="form-control" id="Tanggallahir" ariadescribedby="Tanggallahir" >
-                    </div>                     -->
+                    </div>                    
+                    <div class="form-group">
+                        <label for="File">File</label>
+                        <input type="file" name="userfile" class="form-control" id="File" ariadescribedby="File" >
+                    </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>

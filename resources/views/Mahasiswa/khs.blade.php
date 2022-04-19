@@ -12,6 +12,8 @@
 </div>
 
 <div class="container">
+  <a style="float: right" href="/mahasiswa/nilai/{{ $nilai->mahasiswa->nim }}/pdf" 
+  target="_blank" class="btn btn-success">Cetak KHS</a>
   <p><b>Nama : </b> {{ $nilai->mahasiswa->nama }}</p>
   <p><b>NIM : </b> {{ $nilai->mahasiswa->nim }}</p>
   <p><b>Kelas : </b> {{ $nilai->mahasiswa->kelas->nama_kelas }}</p>
@@ -29,6 +31,19 @@
           <td>{{ $row->matakuliah->sks }}</td>
           <td>{{ $row->matakuliah->semester }}</td>
           <td>{{ $row->nilai }}</td>
+          <td>
+            @if ($row->nilai <= 100 && $row->nilai >= 85)
+              A
+            @elseif ($row->nilai <= 84 && $row->nilai >= 75)
+              B
+            @elseif ($row->nilai <= 74 && $row->nilai >= 60)
+              C
+            @elseif ($row->nilai <= 59 && $row->nilai >= 48)
+              D
+            @else
+              E
+            @endif
+          </td>
         </tr>
       @endforeach
     @else
