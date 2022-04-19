@@ -12,11 +12,11 @@
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><b>Nim: </b>{{$Mahasiswa->nim}}</li>
                 <li class="list-group-item"><b>Nama: </b>{{$Mahasiswa->nama}}</li>
-            <li class="list-group-item"><b>Kelas: </b>{{$Mahasiswa->kelas->nama_kelas}}</li>
+            <li class="list-group-item"><b>Kelas: </b>{{$Mahasiswa->Kelas->nama_kelas}}</li>
                 <li class="list-group-item"><b>Jurusan: </b>{{$Mahasiswa->jurusan}}</li>
                 <li class="list-group-item"><b>Email: </b>{{$Mahasiswa->email}}</li>
                 <li class="list-group-item"><b>Alamat: </b>{{$Mahasiswa->alamat}}</li>
-                <li class="list-group-item"><b>Tanggallahir: </b>{{$Mahasiswa->tanggallahir}}</li>
+                <li class="list-group-item"><b>TanggalLahir: </b>{{$Mahasiswa->tanggallahir}}</li>
                 <li class="list-group-item"><b>Profile: </b>
                 <img style="width: 100%" src="{{ asset('./storage/'. $Mahasiswa->photo_profile) }}" alt=""></li>
             </ul>

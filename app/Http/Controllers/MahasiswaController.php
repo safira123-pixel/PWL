@@ -41,7 +41,7 @@ class MahasiswaController extends Controller
         'Kelas' => 'required',
         'Jurusan' => 'required',
         'Alamat' => 'required',
-         'TanggalLahir' => 'required',
+      'TanggalLahir' => 'required',
          'Userfile' => 'required'
     ]);
     $mahasiswa = new Mahasiswa;
@@ -102,7 +102,7 @@ $kelas = Kelas::all();
   $mahasiswa->photo_profile = $image_name;
 
   $mahasiswa->alamat = $request->get('Alamat');
-  $mahasiswa->tanggal_lahir = $request->get('Lahir');
+  $mahasiswa->tanggal_lahir = $request->get('TanggalLahir');
     $mahasiswa->save();
 
     $kelas = new Kelas;

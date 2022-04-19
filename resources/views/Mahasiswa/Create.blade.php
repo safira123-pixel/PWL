@@ -50,8 +50,8 @@
                         <input type="Alamat" name="Alamat" class="form-control" id="Alamat" ariadescribedby="Alamat" >
                     </div>
                     <div class="form-group">
-                        <label for="Tanggallahir">Tanggal Lahir</label>
-                        <input type="Tanggallahir" name="Tanggallahir" class="form-control" id="Tanggallahir" ariadescribedby="Tanggallahir" >
+                        <label for="TanggalLahir">Tanggal Lahir</label>
+                        <input type="TanggalLahir" name="TanggalLahir" class="form-control" id="TanggalLahir" ariadescribedby="TanggalLahir" >
                     </div>                    
                     <div class="form-group">
                         <label for="File">File</label>

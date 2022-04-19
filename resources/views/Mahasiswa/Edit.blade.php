@@ -31,8 +31,8 @@
                     <input type="text" name="Nama" class="form-control" id="Nama" value="{{ $mahasiswa->nama }}" aria-describedby="Nama" >
                 </div>
                 <div class="form-group">
-                    <label for="kelas">Pilih Kelas</label>
-                    <select name="Kelas" class="form-control" id="kelas">
+                    <label for="Kelas">Pilih Kelas</label>
+                    <select name="Kelas" class="form-control" id="Kelas">
                         @foreach ($kelas as $item)
                         <option value="{{ $item->id }}" {{ ($mahasiswa->kelas_id == $item->id) ? 'selected' : '' }}>{{ $item->nama_kelas }}</option>
                         @endforeach
@@ -51,8 +51,8 @@
                     <input type="Alamat" name="Alamat" class="form-control" id="Alamat" value="{{ $mahasiswa->alamat }}" aria-describedby="Alamat" >
                 </div>
                 <div class="form-group">
-                    <label for="Tanggallahir">Tanggal Lahir</label>
-                    <input type="Tanggallahir" name="Tanggallahir" class="form-control" id="Tanggallahir" value="{{ $mahasiswa->tanggallahir }}" aria-describedby="Tanggallahir" >
+                    <label for="tanggallahir">Tanggal Lahir</label>
+                    <input type="tanggallahir" name="tanggallahir" class="form-control" id="tanggallahir" value="{{ $mahasiswa->tanggallahir }}" aria-describedby="tanggallahir" >
                 </div>
                 <div class="form-group">
                     <label for="File">File</label>
